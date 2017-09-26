@@ -17,5 +17,6 @@ find ./ -type f -exec sed -i -e 's/\/sys\/aa\/bbb/\/sys\/cc\/ddd/g' {} \;
 # Prepend a line matching a particular pattern with '#'
 # In following example prepend a line with '#'which 
 # matches pattern "127.127" in file "/etc/ntp.conf"
+# Also, create a backup of original file
 
 sed -i.bak /127.127/{'s/^/# /'} /etc/ntp.conf
