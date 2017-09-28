@@ -20,3 +20,9 @@ find ./ -type f -exec sed -i -e 's/\/sys\/aa\/bbb/\/sys\/cc\/ddd/g' {} \;
 # Also, create a backup of original file
 
 sed -i.bak /127.127/{'s/^/# /'} /etc/ntp.conf
+
+# Extracting a value from a configuration file using 'awk'
+# Let say you have a key=value pair in some file(/tmp/my.conf)
+# and you want to extract a value for that key using awk
+
+extracted_value=$(awk -F '=' '/^key/ {print $2}' /tmp/my.conf)
