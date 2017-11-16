@@ -26,3 +26,6 @@ sed -i.bak /127.127/{'s/^/# /'} /etc/ntp.conf
 # and you want to extract a value for that key using awk
 
 extracted_value=$(awk -F '=' '/^key/ {print $2}' /tmp/my.conf)
+
+# Removing all unnecessary trailing wihte-spaces from a file
+sed -i 's/[[:space:]]*$//' myfile.txt
