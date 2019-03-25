@@ -29,3 +29,6 @@ extracted_value=$(awk -F '=' '/^key/ {print $2}' /tmp/my.conf)
 
 # Removing all unnecessary trailing wihte-spaces from a file
 sed -i 's/[[:space:]]*$//' myfile.txt
+
+# Removing a line matching a string from a file(inline replacement)
+sed -i '/string pattern/d' ./inpfile
